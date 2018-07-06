@@ -1,0 +1,31 @@
+<assembly>
+    <id>fat</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <unpack>true</unpack>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>com</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/classes</directory>
+            <outputDirectory>conf</outputDirectory>
+            <includes>
+                <include>*.properties</include>
+                <include>*.xml</include>
+                <include>*.txt</include>
+                <include>*.js</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
